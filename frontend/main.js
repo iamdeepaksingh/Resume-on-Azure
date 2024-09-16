@@ -2,7 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionAPI = "";
+const functionAPI = "http://localhost:7071/api/GetResumeCounter";
+/* This is where the backend api (Azure function with bindings with CosmosDB) is connected with the frontend */
 
 const getVisitCount = () => {
     let count = 30;
