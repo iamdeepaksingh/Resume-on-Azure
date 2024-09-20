@@ -24,7 +24,7 @@ namespace Company.Function
             log.LogInformation("GetVisitCounter:C# HTTP trigger function processed a request.");
 
             // Binding Azure Function to Cosmos DB. Retrieve value of counter from Cosmos DB, increment id and update the value in Cosmos DB.
-
+           // Trigger 
           /*  string name = req.Query["name"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
