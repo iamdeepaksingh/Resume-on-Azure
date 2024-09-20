@@ -24,21 +24,8 @@ namespace Company.Function
             log.LogInformation("GetResumeCounter: C# HTTP trigger function processed a request.");
 
             // Binding Azure Function to Cosmos DB. Retrieve value of counter from Cosmos DB, increment id and update the value in Cosmos DB.
-
-          /*  string name = req.Query["name"];
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
-
-            return new OkObjectResult(responseMessage);
-            */
-           
-           updatedCounter = counter;
+ 
+            updatedCounter = counter;
             updatedCounter.Count += 1;
 
             var jsonToReturn = JsonConvert.SerializeObject(updatedCounter);
